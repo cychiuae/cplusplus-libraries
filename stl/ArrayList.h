@@ -1,10 +1,3 @@
-/*
- * ArrayList.h
- *
- *  Created on: 23 May, 2015
- *      Author: yinyinchiu
- */
-
 #ifndef ARRAYLIST_H_
 #define ARRAYLIST_H_
 

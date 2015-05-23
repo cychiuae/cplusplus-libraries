@@ -1,10 +1,3 @@
-/*
- * String.cpp
- *
- *  Created on: 23 May, 2015
- *      Author: yinyinchiu
- */
-
 #include "String.h"
 
 namespace YinLib {

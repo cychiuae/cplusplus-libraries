@@ -1,10 +1,3 @@
-/*
- * ArrayList.cpp
- *
- *  Created on: 23 May, 2015
- *      Author: yinyinchiu
- */
-
 #include "ArrayList.h"
 
 namespace YinLib {

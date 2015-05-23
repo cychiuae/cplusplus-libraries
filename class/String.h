@@ -1,10 +1,3 @@
-/*
- * String.h
- *
- *  Created on: 23 May, 2015
- *      Author: yinyinchiu
- */
-
 #ifndef STRING_H_
 #define STRING_H_
 #include <iostream>
