@@ -52,4 +52,66 @@ namespace YinLib {
 			return _array[index];
 		}
 	}
+
+	template<typename T>
+	void ArrayList<T>::insert(T& element, int index) {
+		T* new_array = NULL;
+
+		if (_number_of_elements + 1 == _size) {
+			new_array = new T[2 * _size];
+		} else {
+			new_array = new T[_size];
+		}
+
+		for (int i = 0; i < index; i++) {
+			new_array[i] = _array[i];
+		}
+
+		new_array[index] = element;
+
+		for (int i = index + 1; i < _size; i++) {
+			new_array[i - 1] = _array[i];
+		}
+
+		delete [] _array;
+		_size *= 2;
+		_number_of_elements++;
+
+		_array = new_array;
+	}
+
+	template<typename T>
+	bool ArrayList<T>::is_exists(T& element) {
+		for (int i = 0; i < _number_of_elements; i++) {
+			if (_array[i] == element) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	template<typename T>
+	void ArrayList<T>::remove(int index) {
+		if (index >= _size) {
+			exit(-1);
+		} else if (index < _number_of_elements) {
+			for (int i = index; i < _number_of_elements; i++) {
+				_array[index] = _array[index + 1];
+			}
+			_number_of_elements--;
+		}
+
+		if (_number_of_elements < _size / 3) {
+			T* new_array = new T[_size / 2];
+
+			for (int i = 0; i < _number_of_elements; i++) {
+				new_array[i] = _array[i];
+			}
+
+			delete [] _array;
+			_size /= 2;
+
+			_array = new_array;
+		}
+	}
 }

@@ -19,8 +19,10 @@ namespace YinLib {
 			void add(T&);
 			void clear();
 			T& get(int);
+			void insert(T&, int);
+			bool is_exists(T&);
+			void remove(int);
 		private:
-			void increase_size();
 			T* _array;
 			int _size;
 			int _number_of_elements;
